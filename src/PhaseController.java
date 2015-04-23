@@ -2,8 +2,12 @@
 public class PhaseController {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		Awareness awareness = new Awareness();
+		SelfSynchronization selfSynchronization = new SelfSynchronization();
+		
+		awareness.run();
+		selfSynchronization.run();
 	}
 
 }
