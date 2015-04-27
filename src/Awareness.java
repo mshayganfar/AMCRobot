@@ -1,7 +1,8 @@
+import jess.Rete;
 
 /**
  * 
- * @author Mohammad
+ * @author Mohammad Shayganfar
  * 
  * NOTE: Awareness is the very first phase needs to be processed during collaboration.
  * It is the ability of the robot to manage and understand its own emotions and those
@@ -10,11 +11,22 @@
  */
 public class Awareness extends Phases{
 	
-	public void readData(String strFilename) {
-		
+	Rete JessEngine;
+	
+	public Awareness() {
+		this.JessEngine = super.JessEngine;
 	}
 	
-	public void run() {
-		this.readData("test.xml");
+	public void run(String strSensoryData, String strRules) {
+		
+		try {
+			JessEngine.reset();
+			JessEngine.executeCommand("(load-facts " + strSensoryData + ")  (facts)");
+			JessEngine.batch(strRules);
+			JessEngine.run();
+		} catch (Exception e) {
+			System.out.println("Exception in loading awareness rules!\n" + e);
+		}
+		
 	}
 }

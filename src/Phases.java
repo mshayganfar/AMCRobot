@@ -1,10 +1,8 @@
+
 import jess.*;
 
 public class Phases {
 	
-	protected Rete reteObj;
+	public static Rete JessEngine = new Rete();
 	
-	public Phases() {
-		this.reteObj = new Rete();
-	}
 }

@@ -17,3 +17,9 @@
 ;;;
 ;;;=============================================================
 
+(defrule who-is-son
+"To see who is the son."
+(mother Jack Erika)
+(father Jack Dan)
+=>
+(assert (son Jack)) (facts))

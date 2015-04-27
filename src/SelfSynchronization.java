@@ -1,7 +1,7 @@
 
 /**
  * 
- * @author Mohammad
+ * @author Mohammad Shayganfar
  *
  * NOTE: Self-synchronization is a phase of collaboration process. represents the 
  * temporal and spatial relationship of the self with the environment. It is having  
