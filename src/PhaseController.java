@@ -6,7 +6,7 @@ public class PhaseController {
 		Awareness awareness = new Awareness();
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();
 		
-		awareness.run("facts/sensoryData.dat", "rules/Perception-rules.clp");
+		awareness.run("facts/sensoryData-Exp1-A5.dat", "rules/Perception-rules.clp", "templates/templates.clp");
 		//selfSynchronization.run();
 	}
 

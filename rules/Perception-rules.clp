@@ -17,9 +17,8 @@
 ;;;
 ;;;=============================================================
 
-(defrule who-is-son
-"To see who is the son."
-(mother Jack Erika)
-(father Jack Dan)
+(defrule emotion-check
+"To check constraints"
+(emotion-valence (task test) (valence-type POSITIVE))
 =>
-(assert (son Jack)) (facts))
+(printout t "works!" crlf))

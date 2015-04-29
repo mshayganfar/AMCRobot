@@ -17,11 +17,12 @@ public class Awareness extends Phases{
 		this.JessEngine = super.JessEngine;
 	}
 	
-	public void run(String strSensoryData, String strRules) {
+	public void run(String strSensoryData, String strRules, String strTemplates) {
 		
 		try {
 			JessEngine.reset();
-			JessEngine.executeCommand("(load-facts " + strSensoryData + ")  (facts)");
+			JessEngine.batch(strTemplates);
+			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts)");
 			JessEngine.batch(strRules);
 			JessEngine.run();
 		} catch (Exception e) {
