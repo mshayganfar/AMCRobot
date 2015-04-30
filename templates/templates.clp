@@ -3,11 +3,16 @@
 (slot task (type STRING))
 (slot valence-type (type SYMBOL) (allowed-values NEGATIVE POSITIVE)))
 
-(deftemplate what-status
-"What does the declarative sentence convey about the status of a task?"
+(deftemplate propose-status
+"The status of a task phase which is conveyed by the declarative sentence."
 (slot task (type STRING))
 (slot phase (type SYMBOL) (allowed-values BEGIN DURING END))
 (slot status (type SYMBOL) (allowed-values SUCCESS FAILURE UNLIKELY LIKELY PROGRESS)))
+
+(deftemplate ask-status
+"What is the status of a task phase?"
+(slot task (type STRING))
+(slot phase (type SYMBOL) (allowed-values BEGIN DURING END)))
 
 (deftemplate when
 "What time-span does the declarative sentence refer to?"
@@ -39,3 +44,19 @@
 "Yes"
 (multislot responsible (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH))
 (multislot task (type STRING)))
+
+(deftemplate discourse-marker
+"To use them (say) for expressing an attitude."
+(slot task (type STRING))
+(slot marker (type STRING))
+(slot type (type SYMBOL) (allowed-values INTERJECTION PAUSE HEDGES ATTITUDE RESPONSE MONITOR ORGANIZER)))
+
+(deftemplate acknowledge
+"To acknowledge the collaborator's status/statement."
+(slot task (type STRING))
+(slot acknowledgement (type STRING)))
+
+(deftemplate propose-can
+"To tell the collaborator what can be done by the robot."
+(slot task (type STRING))
+(slot statement (type STRING)))

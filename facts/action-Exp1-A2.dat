@@ -1,0 +1,3 @@
+(discourse-marker (task "install-panel") (marker "I see.") (type RESPONSE))
+(acknowledge (task "install-panel") (acknowledgement "This is frustrating."))
+(propose-can (task "install-panel") (statement "But, I can help you with the measurement tool and we can finish the task as originally planned."))

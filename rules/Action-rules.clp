@@ -14,3 +14,9 @@
 ;;;     Author: Mohammad Shayganfar
 ;;;
 ;;;=============================================================
+
+(defrule emotion-check
+"To check constraints"
+(emotion-valence (task test) (valence-type POSITIVE))
+=>
+(printout t "works!" crlf))
