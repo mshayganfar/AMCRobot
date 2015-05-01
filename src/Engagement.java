@@ -11,7 +11,8 @@ import jess.Rete;
  *  
  */
 public class Engagement extends Phases{
-Rete JessEngine;
+
+	private Rete JessEngine;
 	
 	public Engagement() {
 		this.JessEngine = super.JessEngine;
@@ -20,7 +21,8 @@ Rete JessEngine;
 	public void run(String strSensoryData, String strRules) {
 		
 		try {
-			JessEngine.batch(super.strTemplates);
+			JessEngine.batch(super.strUtteranceTemplates);
+			JessEngine.batch(super.strCollaborationModuleTemplates);
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts)");
 			JessEngine.batch(strRules);
 			JessEngine.run();

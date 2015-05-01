@@ -1,3 +1,5 @@
+import jess.Rete;
+
 
 /**
  * 
@@ -12,7 +14,23 @@
  */
 public class SelfSynchronization extends Phases{
 	
+	private Rete JessEngine;
+	
+	public SelfSynchronization() {
+		this.JessEngine = super.JessEngine;
+	}
+	
 	public void run() {
+		
+		try {
+			JessEngine.batch(super.strUtteranceTemplates);
+			JessEngine.batch(super.strCollaborationModuleTemplates);
+			//JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts)");
+			//JessEngine.batch(strRules);
+			JessEngine.run();
+		} catch (Exception e) {
+			System.out.println("Exception in loading awareness rules!\n" + e);
+		}
 		
 	}
 }

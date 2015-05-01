@@ -11,7 +11,7 @@ import jess.Rete;
  */
 public class Awareness extends Phases{
 	
-	Rete JessEngine;
+	private Rete JessEngine;
 	
 	public Awareness() {
 		this.JessEngine = super.JessEngine;
@@ -21,7 +21,7 @@ public class Awareness extends Phases{
 		
 		try {
 			JessEngine.reset();
-			JessEngine.batch(super.strTemplates);
+			JessEngine.batch(super.strUtteranceTemplates);
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts)");
 			JessEngine.batch(strRules);
 			JessEngine.run();
