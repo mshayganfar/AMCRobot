@@ -1,0 +1,4 @@
+(propose-when (task "fixing-panel") (when AFTER) (reference "current-task"))
+(propose-should (task "prepare-welding-rod" "attach-rod-to-welding-tool"))
+(explain (task "fetch-another-measurement-tool") (reason "save-time"))
+(propose-when (task "fetch-another-measurement-tool") (when WHILE) (reference "preparing-your-welding-tool"))

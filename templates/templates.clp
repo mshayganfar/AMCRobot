@@ -60,3 +60,23 @@
 "To tell the collaborator what can be done by the robot."
 (slot task (type STRING))
 (slot statement (type STRING)))
+
+(deftemplate propose-who
+"The responsible collaborator for the task."
+(slot task (type STRING))
+(slot responsible (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH)))
+
+(deftemplate propose-when
+"The time that the task takes place."
+(slot task (type STRING))
+(slot when (type SYMBOL) (allowed-values AFTER LATER AGO BEFORE BY UNTIL DURING WHILE FROM-TO FROM-TILL FROM-UNTILL ON IN AT PAST TO FOR SINCE AS-SOON-AS AS-LONG-AS))
+(slot reference (type STRING) (default nil)))
+
+(deftemplate propose-should
+"Let's achieve task."
+(multislot task (type STRING)))
+
+(deftemplate explain
+"To explain the reason behind an action/task."
+(slot task (type STRING))
+(slot reason (type STRING)))
