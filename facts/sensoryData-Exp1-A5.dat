@@ -1,1 +1,1 @@
-(accept (responsible ROBOT ASTRONAUT) (task fetch-measurement-tool prepare-welding-tool))
+(accept (task "fetch-measurement-tool" "prepare-welding-tool") (responsible ROBOT ASTRONAUT))

@@ -42,8 +42,8 @@
 
 (deftemplate accept
 "Yes"
-(multislot responsible (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH))
-(multislot task (type STRING)))
+(multislot task (type STRING))
+(multislot responsible (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH)))
 
 (deftemplate discourse-marker
 "To use them (say) for expressing an attitude."

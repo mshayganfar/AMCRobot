@@ -1,1 +1,1 @@
-(ask-can (task fix-measurement-tool))
+(ask-can (task "fix-measurement-tool"))
