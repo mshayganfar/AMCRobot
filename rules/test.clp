@@ -1,5 +1,5 @@
 (deftemplate utterance
-"Astronaut's utterance"
+"Human's utterance"
 (slot who (type STRING))
 (slot what (type STRING))
 (slot where (type STRING))

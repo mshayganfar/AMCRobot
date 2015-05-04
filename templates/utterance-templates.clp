@@ -43,7 +43,7 @@
 (deftemplate accept
 "Yes"
 (multislot task (type STRING))
-(multislot responsible (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH)))
+(multislot responsible (type SYMBOL) (allowed-values ROBOT HUMAN BOTH)))
 
 (deftemplate discourse-marker
 "To use them (say) for expressing an attitude."
@@ -64,7 +64,7 @@
 (deftemplate propose-who
 "The responsible collaborator for the task."
 (slot task (type STRING))
-(slot responsible (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH)))
+(slot responsible (type SYMBOL) (allowed-values ROBOT HUMAN BOTH)))
 
 (deftemplate propose-when
 "The time that the task takes place."

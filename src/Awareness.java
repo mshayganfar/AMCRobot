@@ -22,6 +22,8 @@ public class Awareness extends Phases{
 		try {
 			JessEngine.reset();
 			JessEngine.batch(super.strUtteranceTemplates);
+			JessEngine.batch(super.strCollaborationModuleTemplates);
+			JessEngine.batch(super.strMotivationModuleTemplates);
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts)");
 			JessEngine.batch(strRules);
 			JessEngine.run();

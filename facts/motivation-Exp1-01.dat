@@ -1,0 +1,2 @@
+(motive (task "install-panel") (agent ROBOT) (motive "acknowledge-emotion") (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))
+(motive (task "install-panel") (agent HUMAN) (motive "stop-current-task") (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity MEDIUM) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))

@@ -1,12 +1,12 @@
 (deftemplate attention-focus
 "Collaborators' focus of attention."
 (slot task (type STRING))
-(slot agent (type SYMBOL) (allowed-values ROBOT ASTRONAUT BOTH)))
+(slot agent (type SYMBOL) (allowed-values ROBOT HUMAN BOTH)))
 
 (deftemplate collaboration-goal
 "Collaborators' goals."
 (slot task (type STRING))
-(slot agent (type SYMBOL) (allowed-values ROBOT ASTRONAUT))
+(slot agent (type SYMBOL) (allowed-values ROBOT HUMAN))
 (slot goal (type STRING)))
 
 (deftemplate shared-goal
