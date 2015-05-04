@@ -1,0 +1,1 @@
+(APPRAISAL::appraisal-frame (task "install-panel") (event "astronaut-utterance") (event-type UTTERANCE) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
