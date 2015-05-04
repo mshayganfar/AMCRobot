@@ -1,4 +1,4 @@
-(deftemplate motive
+(deftemplate MOTIVATION::motive
 "Human's (anticipated) or the robot's motive."
 (slot task (type STRING))
 (slot agent (type SYMBOL) (allowed-values ROBOT HUMAN))

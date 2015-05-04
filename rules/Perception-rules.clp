@@ -17,8 +17,8 @@
 ;;;
 ;;;=============================================================
 
-(defrule emotion-check
-"To check constraints"
-(emotion-valence (task test) (valence-type POSITIVE))
-=>
-(printout t "works!" crlf))
+;(defrule emotion-check
+;"To check constraints"
+;(UTTERANCE::emotion-valence (task test) (valence-type POSITIVE))
+;=>
+;(printout t "works!" crlf))

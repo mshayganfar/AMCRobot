@@ -1,1 +1,1 @@
-(accept (task "fetch-measurement-tool" "prepare-welding-tool") (responsible ROBOT HUMAN))
+(UTTERANCE::accept (task "fetch-measurement-tool" "prepare-welding-tool") (responsible ROBOT HUMAN))
