@@ -7,7 +7,7 @@ public class PhaseController {
 		Engagement engagement = new Engagement();
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();
 		
-		awareness.run("facts/sensoryData-Exp1-A5.dat", "rules/Perception-rules.clp");
+		awareness.run("facts/collaboration-EXP1-01.dat", "rules/Perception-rules.clp");
 		engagement.run("facts/action-Exp1-A4.dat", "rules/Action-rules.clp");
 		//selfSynchronization.run();
 	}

@@ -28,15 +28,15 @@
 (slot task (type STRING))
 (multislot task-outputs (type STRING)))
 
-(deftemplate task-input-type
+(deftemplate task-input-types
 "Input type of a task."
 (slot task (type STRING))
-(slot input-type (type STRING)))
+(multislot input-types (type STRING)))
 
-(deftemplate task-output-type
+(deftemplate task-output-types
 "Output type of a task."
 (slot task (type STRING))
-(slot output-type (type STRING)))
+(multislot output-types (type STRING)))
 
 (deftemplate task-preconditions
 "Preconditions of a task."
@@ -46,7 +46,7 @@
 (deftemplate task-precondition-status
 "Precondition status of a task."
 (slot task (type STRING))
-(multislot task-precondition (type STRING))
+(multislot task-preconditions (type STRING))
 (multislot precondition-status (type SYMBOL) (allowed-values FALSE TRUE UNKNOWN)))
 
 (deftemplate task-postconditions
@@ -57,7 +57,7 @@
 (deftemplate task-postcondition-status
 "Postcondition status of a task."
 (slot task (type STRING))
-(multislot task-postcondition (type STRING))
+(multislot task-postconditions (type STRING))
 (multislot postcondition-status (type SYMBOL) (allowed-values FALSE TRUE UNKNOWN)))
 
 (deftemplate postcondition-sufficiency
