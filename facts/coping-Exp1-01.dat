@@ -1,0 +1,3 @@
+(COPING::focus-based-coping-behavior (task "install-panel") (event "astronaut-utterance") (action "acknowledge-topic") (intention "acknowledge") (coping-strategy-type PROBLEM-FOCUSED) (coping-strategy ACTIVE))
+(COPING::focus-based-coping-behavior (task "install-panel") (event "astronaut-utterance") (action "acknowledge-emotion") (intention "acknowledge") (coping-strategy-type PROBLEM-FOCUSED) (coping-strategy ACTIVE))
+(COPING::relation-based-coping-behavior (task "install-panel") (event "astronaut-utterance") (action "provide-new-alternative-plan") (intention "remove-blocked-task") (coping-strategy-type INTENTION-RELATED) (coping-strategy PLANNING))

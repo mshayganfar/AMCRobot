@@ -2,4 +2,5 @@
 (defmodule UTTERANCE)
 (defmodule MOTIVATION)
 (defmodule APPRAISAL)
+(defmodule COPING)
 ;(defmodule ACTION)

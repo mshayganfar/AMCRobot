@@ -11,6 +11,7 @@ public class Mechanisms {
 	protected static final String strCollaborationModuleTemplates = "templates/collaboration-module-templates.clp";
 	protected static final String strMotivationModuleTemplates    = "templates/motivation-module-templates.clp";
 	protected static final String strAppraisalModuleTemplates     = "templates/appraisal-module-templates.clp";
+	protected static final String strCopingModuleTemplates        = "templates/coping-module-templates.clp";
 	
 	protected void initializeMechanisms() {
 		try {
