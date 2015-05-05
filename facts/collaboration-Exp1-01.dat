@@ -11,5 +11,5 @@
 (COLLABORATION::task-postcondition-status (task "install-panel") (task-postconditions "quality-passed" "welded") (postcondition-status FALSE FALSE))
 (COLLABORATION::postcondition-sufficiency (task "install-panel") (postcondition-sufficiency UNKNOWN))
 (COLLABORATION::recipe-applicability (task "install-panel") (recipe "installing-panel") (recipe-applicability APPLICABLE))
-(COLLABORATION::alternative-recipe (task "install-panel") (alternative-recipe FALSE))
+(COLLABORATION::alternative-recipe (task "install-panel") (recipes "") (alternative-recipe FALSE))
 (COLLABORATION::task-status (task "install-panel") (task-status DONE-FAILURE))

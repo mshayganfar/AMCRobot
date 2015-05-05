@@ -74,7 +74,8 @@
 (deftemplate COLLABORATION::alternative-recipe
 "Alternative recipe(s) of a task."
 (slot task (type STRING))
-(slot alternative-recipe (type atom) (allowed-values TRUE FALSE nil)))
+(multislot recipes (type STRING))
+(multislot alternative-recipe (type atom) (allowed-values TRUE FALSE nil)))
 
 (deftemplate COLLABORATION::task-status
 "Status of a primitive/non-primitive task."

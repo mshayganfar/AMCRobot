@@ -3,7 +3,9 @@
 (slot task (type STRING))
 (slot event (type STRING))
 (slot action (type STRING))
+(slot meta-intention (type STRING))
 (slot intention (type STRING))
+(slot specific-intention (type STRING))
 (slot coping-strategy-type (type SYMBOL) (allowed-values ATTENTION-RELATED BELIEF-RELATED DESIRE-RELATED INTENTION-RELATED))
 (slot coping-strategy (type SYMBOL) (allowed-values SEEK-INFO SUPPRESS-INFO SHIFT-RESPONSIBILITY WISHFUL-THINKING MENTAL-DISENGAGEMENT POSITIVE-REINTERPRETATION PLANNING SEEK-INSTRUMENTAL-SUPPORT MAKE-AMENDS PROCRASTINATION RESIGNATION AVOIDANCE)))
 
@@ -12,6 +14,8 @@
 (slot task (type STRING))
 (slot event (type STRING))
 (slot action (type STRING))
+(slot meta-intention (type STRING))
 (slot intention (type STRING))
+(slot specific-intention (type STRING))
 (slot coping-strategy-type (type SYMBOL) (allowed-values EMOTION-FOCUSED PROBLEM-FOCUSED))
 (slot coping-strategy (type SYMBOL) (allowed-values SUPPRESS-OTHER-ACTIVITIES RESTRAINT SEEK-SOCIAL-EMOTIONAL-SUPPORT POSITIVE-REINTERPRETATION ACCEPTANCE DENIAL BEHAVIORAL-DISENGAGEMENT MENTAL-DISENGAGEMENT ACTIVE PLANNING SEEK-SOCIAL-INSTRUMENTAL-SUPPORT)))
