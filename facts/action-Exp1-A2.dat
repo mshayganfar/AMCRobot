@@ -1,3 +1,3 @@
-(UTTERANCE::discourse-marker (task "install-panel") (marker "I see.") (type RESPONSE))
-(UTTERANCE::acknowledge (task "install-panel") (acknowledgement "This is frustrating."))
-(UTTERANCE::propose-can (task "install-panel") (statement "But, I can help you with the measurement tool and we can finish the task as originally planned."))
+(UTTERANCE::discourse-marker (task "install-panel") (event "robot-utterance") (marker "I see.") (type RESPONSE))
+(UTTERANCE::acknowledge (task "install-panel") (event "robot-utterance") (acknowledgement "This is frustrating."))
+(UTTERANCE::propose-can (task "install-panel") (event "robot-utterance") (statement "But, I can help you with the measurement tool and we can finish the task as originally planned."))
