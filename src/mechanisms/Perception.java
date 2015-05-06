@@ -17,6 +17,7 @@ public class Perception extends Mechanisms{
 			JessEngine.batch(super.strAppraisalModuleTemplates);
 			JessEngine.batch(super.strCopingModuleTemplates);
 			JessEngine.batch(super.strToMModuleTemplates);
+			JessEngine.batch(super.strMentalStatesTemplates);
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts *)");
 			JessEngine.run();
 		} catch (JessException e) {

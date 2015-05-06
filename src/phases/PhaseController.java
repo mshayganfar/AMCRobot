@@ -8,7 +8,7 @@ public class PhaseController extends Phases {
 		//Engagement engagement = new Engagement();
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();
 		
-		awareness.run("facts/ToM-Exp1-01.dat"); // "rules/Perception-rules.clp"
+		awareness.run("facts/mental-state-Exp1-01.dat"); // "rules/Perception-rules.clp"
 		//engagement.run("rules/Action-rules.clp");
 		//selfSynchronization.run();
 		
