@@ -1,4 +1,4 @@
-(deftemplate MENTAL-STATE::belief-sharedPlans
+(deftemplate MENTAL-STATE::belief
 "Robot's belief based on SharedPlans theory."
 (slot task (type STRING))
 (slot event (type STRING))

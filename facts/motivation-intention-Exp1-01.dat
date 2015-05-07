@@ -1,0 +1,1 @@
+(MENTAL-STATE::intention (task "install-panel") (event "astronaut-utterance") (agent ROBOT) (intention "acknowledge-emotion") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
