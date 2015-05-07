@@ -41,3 +41,10 @@
 (slot event (type STRING))
 (slot agent (type SYMBOL) (type SYMBOL) (allowed-values ROBOT HUMAN))
 (slot emotion-instance (type SYMBOL) (allowed-values JOY ANGER HOPE GUILT PRIDE SHAME WORRY FRUSTRATION NEUTRAL) (default NEUTRAL)))
+
+(deftemplate MENTAL-STATE::contribute
+"An intention contributes to another intention as a hierarchy."
+(slot task (type STRING))
+(slot event (type STRING))
+(slot contributor (type STRING))
+(slot contributed (type STRING)))
