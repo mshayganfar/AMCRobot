@@ -13,16 +13,12 @@ import mechanisms.*;
  */
 public class Awareness extends Phases{
 	
-	private static final String strSensoryData          = "facts/sensoryData-Exp1-A1.dat";
-	private static final String strCollaborationData    = "facts/collaboration-Exp1-01.dat";
-//	private static final String strToMData              = "facts/ToM-Exp1-01.dat";
-	private static final String strAppraisalData        = "facts/appraisal-Exp1-01.dat";
-	
 	private Perception perception;
 	private Collaboration collaboration;
 	private ToM tom;
 	private Appraisal appraisal;
 	private Motivation motivation;
+	private Coping coping;
 	
 	public Awareness() {
 		this.perception    = new Perception();
@@ -30,14 +26,16 @@ public class Awareness extends Phases{
 		this.tom           = new ToM();
 		this.appraisal     = new Appraisal();
 		this.motivation    = new Motivation();
+		this.coping        = new Coping();
 	}
 	
 	public void run() {
 		
-		perception.perceive(strSensoryData);
-		collaboration.generateCollaborationOutput(strCollaborationData);
+		perception.perceive();
+		collaboration.generateCollaborationOutput();
 		tom.generateToMOutput();
-		appraisal.appraise(strAppraisalData);
+		appraisal.appraise();
 		motivation.generateMotivationOutput();
+		coping.cope();
 	}
 }

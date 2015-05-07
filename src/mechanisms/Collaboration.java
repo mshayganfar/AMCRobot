@@ -4,7 +4,9 @@ import jess.JessException;
 
 public class Collaboration extends Mechanisms{
 
-	public void generateCollaborationOutput(String strCollaborationData) {
+	private static final String strCollaborationData = "facts/collaboration-Exp1-01.dat";
+	
+	public void generateCollaborationOutput() {
 		try {
 			JessEngine.executeCommand("(load-facts " + strCollaborationData + ") (facts *)");
 			JessEngine.run();

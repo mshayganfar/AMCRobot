@@ -4,7 +4,9 @@ import jess.JessException;
 
 public class Appraisal extends Mechanisms{
 
-	public void appraise(String strAppraisalData) {
+	private static final String strAppraisalData = "facts/appraisal-Exp1-01.dat";
+	
+	public void appraise() {
 		try {
 			JessEngine.executeCommand("(load-facts " + strAppraisalData + ") (facts *)");
 			JessEngine.run();

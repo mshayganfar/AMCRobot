@@ -4,11 +4,13 @@ import jess.JessException;
 
 public class Perception extends Mechanisms{
 
+	private static final String strSensoryData = "facts/sensoryData-Exp1-A1.dat";
+	
 	public Perception() {
 		super.initializeMechanisms();
 	}
 		
-	public void perceive(String strSensoryData) {
+	public void perceive() {
 		try {
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts *)");
 			JessEngine.run();
