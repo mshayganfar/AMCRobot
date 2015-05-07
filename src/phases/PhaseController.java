@@ -1,6 +1,6 @@
 package phases;
 
-public class PhaseController extends Phases {
+public class PhaseController {
 
 	public static void main(String[] args) {
 		
@@ -8,7 +8,7 @@ public class PhaseController extends Phases {
 		//Engagement engagement = new Engagement();
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();
 		
-		awareness.run("facts/mental-state-Exp1-01.dat"); // "rules/Perception-rules.clp"
+		awareness.run(); // "rules/Perception-rules.clp"
 		//engagement.run("rules/Action-rules.clp");
 		//selfSynchronization.run();
 		

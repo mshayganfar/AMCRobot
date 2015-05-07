@@ -10,14 +10,6 @@ public class Perception extends Mechanisms{
 		
 	public void perceive(String strSensoryData) {
 		try {
-			JessEngine.reset();
-			JessEngine.batch(super.strUtteranceTemplates);
-			JessEngine.batch(super.strCollaborationModuleTemplates);
-			JessEngine.batch(super.strMotivationModuleTemplates);
-			JessEngine.batch(super.strAppraisalModuleTemplates);
-			JessEngine.batch(super.strCopingModuleTemplates);
-			JessEngine.batch(super.strToMModuleTemplates);
-			JessEngine.batch(super.strMentalStatesTemplates);
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts *)");
 			JessEngine.run();
 		} catch (JessException e) {

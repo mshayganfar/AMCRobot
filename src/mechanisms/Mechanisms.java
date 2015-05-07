@@ -18,6 +18,14 @@ public class Mechanisms {
 	protected void initializeMechanisms() {
 		try {
 			JessEngine.batch("modules/module-definitions.clp");
+			JessEngine.reset();
+			JessEngine.batch(strUtteranceTemplates);
+			JessEngine.batch(strCollaborationModuleTemplates);
+			JessEngine.batch(strMotivationModuleTemplates);
+			JessEngine.batch(strAppraisalModuleTemplates);
+			JessEngine.batch(strCopingModuleTemplates);
+			JessEngine.batch(strToMModuleTemplates);
+			JessEngine.batch(strMentalStatesTemplates);
 		} catch (JessException e) {
 			e.printStackTrace();
 		}
