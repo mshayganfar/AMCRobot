@@ -32,10 +32,16 @@ public class Awareness extends Phases{
 	public void run() {
 		
 		perception.perceive();
-		perception.runRulesPerception("rules/TheoryOfMind-rules.clp");
-//		collaboration.generateCollaborationOutput();
-//		tom.generateToMOutput();
-//		appraisal.appraise();
+		perception.runPerceptionRules("rules/Perception-rules.clp");
+		
+		collaboration.generateCollaborationOutput();
+		collaboration.runCollaborationRules("rules/Collaboration-rules.clp");
+		
+		tom.generateToMOutput();
+		tom.runToMRules("rules/TheoryOfMind-rules.clp");
+		
+		appraisal.appraise("rules/Appraisal-rules.clp");
+		
 //		motivation.generateMotivationOutput();
 //		coping.cope();
 	}

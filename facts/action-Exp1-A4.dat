@@ -1,4 +1,4 @@
-(UTTERANCE::propose-when (task "fixing-panel") (event "robot-utterance") (when AFTER) (reference "current-task"))
-(UTTERANCE::propose-should (task "prepare-welding-rod" "attach-rod-to-welding-tool") (event "robot-utterance"))
-(UTTERANCE::explain (task "fetch-another-measurement-tool") (event "robot-utterance") (reason "save-time"))
-(UTTERANCE::propose-when (task "fetch-another-measurement-tool") (event "robot-utterance") (when WHILE) (reference "preparing-your-welding-tool"))
+(UTTERANCE::propose-when (task "fixing-panel") (event "ee-ru-02") (when AFTER) (reference "current-task"))
+(UTTERANCE::propose-should (task "prepare-welding-rod" "attach-rod-to-welding-tool") (event "ee-ru-02"))
+(UTTERANCE::explain (task "fetch-another-measurement-tool") (event "ee-ru-02") (reason "save-time"))
+(UTTERANCE::propose-when (task "fetch-another-measurement-tool") (event "ee-ru-02") (when WHILE) (reference "preparing-your-welding-tool"))

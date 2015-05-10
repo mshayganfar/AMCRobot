@@ -1,1 +1,1 @@
-(MENTAL-STATE::belief (task "install-panel") (event "astronaut-utterance") (agent ROBOT) (belief "acknowledge-emotion") (belief-type PRIVATE) (belief-about OTHER) (strength HIGH) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence UNKNOWN))
+(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "acknowledge-emotion") (belief-type PRIVATE) (belief-about OTHER) (strength HIGH) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence UNKNOWN))

@@ -1,0 +1,1 @@
+(ToM::user-type (task "install-panel") (event "ee-au-01") (knowledge-competency  MEDIUM-AUTONOMY) (behavior-competency HIGH-COMMUNICATIVE))

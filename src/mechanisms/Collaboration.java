@@ -8,10 +8,20 @@ public class Collaboration extends Mechanisms{
 	
 	public void generateCollaborationOutput() {
 		try {
-			JessEngine.executeCommand("(load-facts " + strCollaborationData + ") (facts *)");
-			JessEngine.run();
+			JessEngine.executeCommand("(load-facts " + strCollaborationData + ")");
 		} catch (JessException e) {
 			System.out.println("Exception in loading collaboration facts!\n");
+			e.printStackTrace();
+		}
+	}
+	
+	public void runCollaborationRules(String strRules) {
+		try {
+			JessEngine.batch(strRules);
+			JessEngine.run();
+			JessEngine.executeCommand("(facts *)");
+		} catch (Exception e) {
+			System.out.println("Exception in loading collaboration rules!\n");
 			e.printStackTrace();
 		}
 	}

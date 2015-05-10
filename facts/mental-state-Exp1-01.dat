@@ -1,4 +1,4 @@
-(MENTAL-STATE::belief-sharedPlans (task "install-panel") (event "astronaut-utterance") (agent ROBOT) (belief "astronaut-frustrated") (belief-type PRIVATE) (belief-about OTHER) (strength MEDIUM) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence UNKNOWN))
-(MENTAL-STATE::intention (task "install-panel") (event "astronaut-utterance") (agent ROBOT) (intention "remove-blocked-task") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
-(MENTAL-STATE::goal (task "install-panel") (event "astronaut-utterance") (agent ROBOT) (goal "succeed-finishing-task") (proximity DISTAL) (specificity SPECIFIC) (difficulty DIFFICULT))
-(MENTAL-STATE::emotion-instance (task "install-panel") (event "astronaut-utterance") (agent HUMAN) (emotion-instance FRUSTRATION))
+(MENTAL-STATE::belief-sharedPlans (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "astronaut-frustrated") (belief-type PRIVATE) (belief-about OTHER) (strength MEDIUM) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence UNKNOWN))
+(MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "remove-blocked-task") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
+(MENTAL-STATE::goal (task "install-panel") (event "ee-au-01") (agent ROBOT) (goal "succeed-finishing-task") (proximity DISTAL) (specificity SPECIFIC) (difficulty DIFFICULT))
+(MENTAL-STATE::emotion-instance (task "install-panel") (event "ee-au-01") (agent HUMAN) (emotion-instance FRUSTRATION))

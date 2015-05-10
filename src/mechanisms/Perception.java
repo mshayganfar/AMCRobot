@@ -19,13 +19,13 @@ public class Perception extends Mechanisms{
 		}
 	}
 	
-	public void runRulesPerception(String strRules) {
+	public void runPerceptionRules(String strRules) {
 		try {
 			JessEngine.batch(strRules);
 			JessEngine.run();
 			JessEngine.executeCommand("(facts *)");
 		} catch (Exception e) {
-			System.out.println("Exception in loading awareness rules!\n");
+			System.out.println("Exception in loading perception rules!\n");
 			e.printStackTrace();
 		}
 	}

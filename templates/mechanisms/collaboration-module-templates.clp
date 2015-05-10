@@ -17,6 +17,12 @@
 (slot event (type STRING))
 (slot shared-goal (type STRING)))
 
+(deftemplate COLLABORATION::shared-goal-status
+"Shared goal (abstract) between collaborators."
+(slot task (type STRING))
+(slot event (type STRING))
+(slot shared-goal-status (type SYMBOL) (allowed-values ACHIEVED BLOCKED INPROGRESS UNKNOWN) (default UNKNOWN)))
+
 (deftemplate COLLABORATION::temporal-order
 "Temporal order of the tasks."
 (multislot tasks (type STRING))
@@ -56,8 +62,7 @@
 "Precondition status of a task."
 (slot task (type STRING))
 (slot event (type STRING))
-(multislot task-preconditions (type STRING))
-(multislot precondition-status (type SYMBOL) (allowed-values FALSE TRUE UNKNOWN) (default UNKNOWN)))
+(multislot preconditions-status (type SYMBOL) (allowed-values ALL SOME NONE UNKNOWN) (default UNKNOWN)))
 
 (deftemplate COLLABORATION::task-postconditions
 "Postconditions of a task."
@@ -69,8 +74,7 @@
 "Postcondition status of a task."
 (slot task (type STRING))
 (slot event (type STRING))
-(multislot task-postconditions (type STRING))
-(multislot postcondition-status (type SYMBOL) (allowed-values FALSE TRUE UNKNOWN) (default UNKNOWN)))
+(multislot postconditions-status (type SYMBOL) (allowed-values ALL SOME NONE UNKNOWN) (default UNKNOWN)))
 
 (deftemplate COLLABORATION::postcondition-sufficiency
 "Sufficiency of the postcondition of a task."

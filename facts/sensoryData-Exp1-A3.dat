@@ -1,1 +1,1 @@
-(UTTERANCE::ask-can (task "fix-measurement-tool") (event "astronaut-utterance"))
+(UTTERANCE::ask-can (task "fix-measurement-tool") (event "ee-au-01"))
