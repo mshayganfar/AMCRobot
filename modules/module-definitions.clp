@@ -5,4 +5,5 @@
 (defmodule COPING)
 (defmodule ToM)
 (defmodule MENTAL-STATE)
+(defmodule EMOTION-INSTANCE)
 ;(defmodule ACTION)

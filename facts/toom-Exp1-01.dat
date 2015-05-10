@@ -1,1 +1,0 @@
-(ToM::user-type (task "install-panel") (event "astronaut-utterance") (knowledge-competency LOW-AUTONOMY) (behavior-competency MEDIUM-COMMUNICATIVE))

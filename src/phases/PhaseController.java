@@ -11,12 +11,6 @@ public class PhaseController {
 		awareness.run(); // "rules/Perception-rules.clp"
 		//engagement.run("rules/Action-rules.clp");
 		//selfSynchronization.run();
-		
-//		try {
-//			JessEngine.executeCommand("(facts *)");
-//		} catch (JessException e) {
-//			e.printStackTrace();
-//		}
 	}
 
 }

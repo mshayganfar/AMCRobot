@@ -1,1 +1,1 @@
-(ToM::motive (task "install-panel") (event "astronaut-utterance") (motive "stop-current-task") (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity MEDIUM) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))
+(ToM::motive (task "install-panel") (event "e-a-01") (motive "stop-current-task") (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity MEDIUM) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))

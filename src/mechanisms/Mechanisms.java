@@ -14,6 +14,7 @@ public class Mechanisms {
 	protected static final String strCopingModuleTemplates        = "templates/mechanisms/coping-module-templates.clp";
 	protected static final String strToMModuleTemplates           = "templates/mechanisms/ToM-module-templates.clp";
 	protected static final String strMentalStatesTemplates        = "templates/mental-states/mental-states-templates.clp";
+	protected static final String strEmotionInstanceTemplates     = "templates/events/emotion-instance-templates.clp";
 	
 	protected void initializeMechanisms() {
 		try {
@@ -26,6 +27,7 @@ public class Mechanisms {
 			JessEngine.batch(strCopingModuleTemplates);
 			JessEngine.batch(strToMModuleTemplates);
 			JessEngine.batch(strMentalStatesTemplates);
+			JessEngine.batch(strEmotionInstanceTemplates);
 		} catch (JessException e) {
 			e.printStackTrace();
 		}

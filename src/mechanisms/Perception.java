@@ -12,8 +12,7 @@ public class Perception extends Mechanisms{
 		
 	public void perceive() {
 		try {
-			JessEngine.executeCommand("(load-facts " + strSensoryData + ") (facts *)");
-			JessEngine.run();
+			JessEngine.executeCommand("(load-facts " + strSensoryData + ")");
 		} catch (JessException e) {
 			System.out.println("Exception in peceiving sensory data!\n");
 			e.printStackTrace();
@@ -24,6 +23,7 @@ public class Perception extends Mechanisms{
 		try {
 			JessEngine.batch(strRules);
 			JessEngine.run();
+			JessEngine.executeCommand("(facts *)");
 		} catch (Exception e) {
 			System.out.println("Exception in loading awareness rules!\n");
 			e.printStackTrace();
