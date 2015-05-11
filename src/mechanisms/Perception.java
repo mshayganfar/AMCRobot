@@ -23,7 +23,7 @@ public class Perception extends Mechanisms{
 		try {
 			JessEngine.batch(strRules);
 			JessEngine.run();
-			JessEngine.executeCommand("(facts *)");
+//			JessEngine.executeCommand("(facts *)");
 		} catch (Exception e) {
 			System.out.println("Exception in loading perception rules!\n");
 			e.printStackTrace();

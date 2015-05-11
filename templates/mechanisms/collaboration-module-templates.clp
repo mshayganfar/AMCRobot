@@ -63,7 +63,7 @@
 "Precondition status of a task."
 (slot task (type STRING))
 (slot event (type STRING))
-(multislot preconditions-status (type SYMBOL) (allowed-values ALL SOME NONE UNKNOWN) (default UNKNOWN)))
+(multislot preconditions-status (type SYMBOL) (allowed-values SATISFIED UNSATISFIED UNKNOWN) (default UNKNOWN)))
 
 (deftemplate COLLABORATION::task-postconditions
 "Postconditions of a task."
@@ -75,7 +75,7 @@
 "Postcondition status of a task."
 (slot task (type STRING))
 (slot event (type STRING))
-(multislot postconditions-status (type SYMBOL) (allowed-values ALL SOME NONE UNKNOWN) (default UNKNOWN)))
+(multislot postconditions-status (type SYMBOL) (allowed-values SATISFIED UNSATISFIED UNKNOWN) (default UNKNOWN)))
 
 (deftemplate COLLABORATION::postcondition-sufficiency
 "Sufficiency of the postcondition of a task."

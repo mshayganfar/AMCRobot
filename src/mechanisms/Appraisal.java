@@ -11,8 +11,7 @@ public class Appraisal extends Mechanisms{
 			//JessEngine.executeCommand("(load-facts " + strAppraisalData + ")");
 			JessEngine.batch(strRules);
 			JessEngine.run();
-			JessEngine.executeCommand("(facts *)");
-			
+//			JessEngine.executeCommand("(facts *)");
 		} catch (JessException e) {
 			System.out.println("Exception in appraisal process!\n");
 			e.printStackTrace();
