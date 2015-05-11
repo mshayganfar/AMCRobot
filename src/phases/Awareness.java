@@ -44,6 +44,6 @@ public class Awareness extends Phases{
 		
 		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
 		
-//		coping.cope();
+		coping.cope("rules/Coping-rules.clp");
 	}
 }
