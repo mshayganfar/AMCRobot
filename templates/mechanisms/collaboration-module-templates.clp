@@ -2,7 +2,8 @@
 "Collaborators' focus of attention."
 (slot task (type STRING))
 (slot event (type STRING))
-(slot agent (type SYMBOL) (allowed-values ROBOT HUMAN BOTH UNKNOWN) (default UNKNOWN)))
+(slot agent (type SYMBOL) (allowed-values ROBOT HUMAN BOTH UNKNOWN) (default UNKNOWN))
+(slot focus (type SYMBOL) (allowed-values EVENT ENVIRONMENT TASK SELF OTHER UNKNOWN) (default UNKNOWN)))
 
 (deftemplate COLLABORATION::collaboration-goal
 "Collaborators' goals."
