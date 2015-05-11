@@ -35,7 +35,13 @@
 (slot task (type STRING))
 (slot event (type STRING)))
 
-(deftemplate UTTERANCE::verbal-emotion
+(deftemplate UTTERANCE::verbal-emotion-instance
+"What are the somatic markers associated with verbally conveyed emotion?"
+(slot task (type STRING))
+(slot event (type STRING))
+(slot emotion-instance (type STRING)))
+
+(deftemplate UTTERANCE::verbal-emotion-somatic-marker
 "What are the somatic markers associated with verbally conveyed emotion?"
 (slot task (type STRING))
 (slot event (type STRING))

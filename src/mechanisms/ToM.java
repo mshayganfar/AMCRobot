@@ -34,7 +34,7 @@ public class ToM extends Mechanisms{
 		try {
 			JessEngine.batch(strRules);
 			JessEngine.run();
-//			JessEngine.executeCommand("(facts *)");
+			JessEngine.executeCommand("(facts *)");
 		} catch (Exception e) {
 			System.out.println("Exception in loading collaboration rules!\n");
 			e.printStackTrace();
