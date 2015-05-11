@@ -42,7 +42,8 @@ public class Awareness extends Phases{
 		
 		appraisal.appraise("rules/Appraisal-rules.clp");
 		
-//		motivation.generateMotivationOutput();
+		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
+		
 //		coping.cope();
 	}
 }

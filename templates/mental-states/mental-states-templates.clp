@@ -13,6 +13,11 @@
 (slot saliency (type SYMBOL) (allowed-values HIGH MEDIUM LOW UNKNOWN) (default UNKNOWN))
 (slot persistence (type SYMBOL) (allowed-values HIGH MEDIUM LOW UNKNOWN) (default UNKNOWN)))
 
+(deftemplate MENTAL-STATE::belief-about
+"Robot's belief about human's mental states, e.g., motive, goal, etc."
+(slot event (type STRING))
+(slot mental-state-id (type STRING)))
+
 (deftemplate MENTAL-STATE::intention
 "Robot's intention or belief about human's intention."
 (slot task (type STRING))
@@ -24,6 +29,18 @@
 (slot certainty (type SYMBOL) (allowed-values CERTAIN UNCERTAIN UNKNOWN) (default UNKNOWN))
 (slot ambivalence (type SYMBOL) (allowed-values AMBIVALENT UNAMBIVALENT UNKNOWN) (default UNKNOWN))
 (slot affective-cognitive-consistency (type SYMBOL) (allowed-values CONSISTENT INCONSISTENT UNKNOWN) (default UNKNOWN)))
+
+(deftemplate MENTAL-STATE::motive
+"Robot's motive."
+(slot task (type STRING))
+(slot event (type STRING))
+(slot motive (type STRING))
+(slot motive-insistence (type SYMBOL) (allowed-values HIGH LOW MEDIUM UNKNOWN) (default UNKNOWN))
+(slot motive-importance (type SYMBOL) (allowed-values IMPORTANT UNIMPORTANT NEUTRAL UNKNOWN) (default UNKNOWN))
+(slot motive-urgency (type SYMBOL) (allowed-values URGENT NONURGENT NEUTRAL UNKNOWN) (default UNKNOWN))
+(slot motive-intensity (type SYMBOL) (allowed-values HIGH LOW MEDIUM UNKNOWN) (default UNKNOWN))
+(slot motive-failure-disruptiveness (type SYMBOL) (allowed-values HIGH DISRUPTIVE NONDISRUPTIVE NEUTRAL UNKNOWN) (default UNKNOWN))
+(slot motive-status (type SYMBOL) (allowed-values ACTIVE PASSIVE UNKNOWN) (default UNKNOWN)))
 
 (deftemplate MENTAL-STATE::goal
 "Robot's goal or belief about human's goal."
