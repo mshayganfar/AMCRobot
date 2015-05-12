@@ -45,9 +45,9 @@
 "What are the somatic markers associated with verbally conveyed emotion?"
 (slot task (type STRING))
 (slot event (type STRING))
-(slot valence (type FLOAT))
-(slot arousal (type FLOAT))
-(slot stance (type FLOAT)))
+(slot valence (type FLOAT) (default 0.0))
+(slot arousal (type FLOAT) (default 0.0))
+(slot stance (type FLOAT) (default 0.0)))
 
 (deftemplate UTTERANCE::ask-can
 "Can you do a task?"

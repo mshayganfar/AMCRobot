@@ -66,3 +66,9 @@
 (slot event (type STRING))
 (slot contributor (type STRING))
 (slot contributed (type STRING)))
+
+(deftemplate MENTAL-STATE::mental-states-distance
+"The distance between the robot's and human's mental states."
+(slot task (type STRING))
+(slot event (type STRING))
+(slot distance (type SYMBOL) (allowed-values BIG SMALL MEDIUM UNKNOWN) (default UNKNOWN)))

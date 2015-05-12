@@ -37,7 +37,7 @@
 "The object of focus of attention."
 (UTTERANCE::causality (task "install-panel") (event "ee-au-01") (cause "measurement-tool-problem") (effect "finish-task"))
 =>
-(assert (COLLABORATION::attention-focus (task "install-panel") (event "ee-au-01") (agent HUMAN) (focus ENVIRONMENT))))
+(assert (COLLABORATION::attention-focus (task "install-panel") (event "ee-au-01") (agent HUMAN) (focus TASK))))
 ;; Corresponding methods should be called in Java to obtain these values for appraisal variables based on my own algorithms.
 
 
@@ -49,3 +49,21 @@
 (assert (COLLABORATION::task-precondition-status (task "install-panel") (event "ee-au-01") (preconditions-status UNSATISFIED))))
 ;; Corresponding methods should be called in Java to obtain these values for appraisal variables based on my own algorithms.
 
+
+(defrule COLLABORATION::task-postcondition-status
+"The postcondition status of the given task."
+(COLLABORATION::task-precondition-status (task "install-panel") (event "ee-au-01") (preconditions-status UNSATISFIED))
+=>
+(assert (COLLABORATION::task-postcondition-status (task "install-panel") (event "ee-au-01") (postconditions-status UNSATISFIED))))
+;; Corresponding methods should be called in Java to obtain these values for appraisal variables based on my own algorithms.
+
+
+;; I am not sure whether this particular rule should be in this module!
+(defrule COLLABORATION::mental-states-distance
+"The precondition status of the given task."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(ToM::reverse-appraisal (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (emotion-instance FRUSTRATION) (perspective OTHER) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (COLLABORATION::mental-states-distance (task "install-panel") (event "ee-au-01") (distance SMALL))))
+;; Corresponding methods should be called in Java to obtain these values for appraisal variables based on my own algorithms.

@@ -1,7 +1,5 @@
 package phases;
 
-import mechanisms.*;
-
 /**
  * 
  * @author Mohammad Shayganfar
@@ -13,22 +11,6 @@ import mechanisms.*;
  */
 public class Awareness extends Phases{
 	
-	private Perception perception;
-	private Collaboration collaboration;
-	private ToM tom;
-	private Appraisal appraisal;
-	private Motivation motivation;
-	private Coping coping;
-	
-	public Awareness() {
-		this.perception    = new Perception();
-		this.collaboration = new Collaboration();
-		this.tom           = new ToM();
-		this.appraisal     = new Appraisal();
-		this.motivation    = new Motivation();
-		this.coping        = new Coping();
-	}
-	
 	public void run() {
 		
 		perception.perceive();
@@ -37,10 +19,5 @@ public class Awareness extends Phases{
 		appraisal.appraise("rules/Appraisal-rules.clp");
 		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
 		coping.cope("rules/Coping-rules.clp");
-		
-//		perception.runPerceptionRules("rules/Perception-rules.clp");
-		
-//		collaboration.generateCollaborationOutput();
-//		tom.generateToMOutput();
 	}
 }

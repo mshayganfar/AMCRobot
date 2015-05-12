@@ -12,20 +12,13 @@ public class Motivation extends Mechanisms{
 		generateMotive(strRules);
 		generateBelief(strRules);
 		generateIntention(strRules);
-		try {
-			JessEngine.run();
-			JessEngine.executeCommand("(facts *)");
-		} catch (JessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	public void generateMotive(String strRules) {
 		try {
 //			JessEngine.executeCommand("(load-facts " + strMotivationMotiveData + ")");
 			JessEngine.batch(strRules);
-//			JessEngine.run();
+			JessEngine.run();
 //			JessEngine.executeCommand("(facts *)");
 		} catch (JessException e) {
 			System.out.println("Exception in loading motivation facts!\n");
@@ -37,7 +30,7 @@ public class Motivation extends Mechanisms{
 		try {
 //			JessEngine.executeCommand("(load-facts " + strMotivationBeliefData + ")");
 			JessEngine.batch(strRules);
-//			JessEngine.run();
+			JessEngine.run();
 //			JessEngine.executeCommand("(facts *)");
 		} catch (JessException e) {
 			System.out.println("Exception in loading motivation facts!\n");
@@ -49,7 +42,7 @@ public class Motivation extends Mechanisms{
 		try {
 //			JessEngine.executeCommand("(load-facts " + strMotivationIntentionData + ")");
 			JessEngine.batch(strRules);
-//			JessEngine.run();
+			JessEngine.run();
 //			JessEngine.executeCommand("(facts *)");
 		} catch (JessException e) {
 			System.out.println("Exception in loading motivation facts!\n");

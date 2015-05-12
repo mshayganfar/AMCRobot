@@ -3,7 +3,7 @@
 (slot task (type STRING))
 (slot event (type STRING))
 (slot event-type (type SYMBOL) (allowed-values UTTERANCE ACTION EXPRESSION INTERNAL UNKNOWN) (default UNKNOWN))
-(slot with-respect-to (type SYMBOL) (allowed-values SHARED-GOAL SELF-GOAL OTHER-GOAL) (default SHARED-GOAL))
+(slot with-respect-to (type SYMBOL) (allowed-values SHARED-GOAL SELF-GOAL OTHER-GOAL MENTAL-STATE-DISTANCE) (default SHARED-GOAL))
 (slot perspective (type SYMBOL) (allowed-values SELF OTHER UNKNOWN) (default UNKNOWN))
 (slot relevance (type SYMBOL) (allowed-values RELEVANT IRRELEVANT NEUTRAL UNKNOWN) (default UNKNOWN))
 (slot desirability (type SYMBOL) (allowed-values DESIRABLE UNDESIRABLE NEUTRAL UNKNOWN) (default UNKNOWN))

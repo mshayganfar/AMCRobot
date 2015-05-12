@@ -29,12 +29,15 @@
 (EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (agent HUMAN) (emotion-instance ?emotionInstance))
 (COLLABORATION::task-precondition-status (task "install-panel") (event "ee-au-01") (preconditions-status ?precondStatus))
 (COLLABORATION::task-postcondition-status (task "install-panel") (event "ee-au-01") (postconditions-status ?postcondStatus))
+(COLLABORATION::task-status (task "install-panel") (event "ee-au-01") (task-status ?taskStatus))
 (COLLABORATION::shared-goal-status (task "install-panel") (event "ee-au-01") (shared-goal-status ?sharedGoalStatus))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
 =>
-(printout t "Astronauts emotion: " ?emotionInstance 
-			" , precondition status: " ?precondStatus
-			" , postcondition status: " ?postcondStatus
-			" , postcondition status: " ?postcondStatus
-			" , shared goal status: " ?sharedGoalStatus crlf))
+(assert (ToM::user-type (task "install-panel") (event "ee-au-01") (knowledge-competency LOW-AUTONOMY) (behavior-competency HIGH-COMMUNICATIVE))))
+;(printout t "Astronauts emotion: " ?emotionInstance 
+;			" , precondition status: " ?precondStatus 
+;			" , postcondition status: " ?postcondStatus
+;			" , task status: " ?taskStatus
+;			" , shared goal status: " ?sharedGoalStatus crlf))
 ;; Corresponding methods should be called in Java to use these values for updating human's user model.
 
