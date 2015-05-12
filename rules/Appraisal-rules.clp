@@ -20,7 +20,7 @@
 "The most relevent emotion instance to current appraisal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
 =>
-(assert (EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (emotion-instance FRUSTRATION))))
+(assert (EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (agent HUMAN) (emotion-instance FRUSTRATION))))
 ;; A method should be called in Java to assert this fact into the working memory.
 
 

@@ -5,4 +5,3 @@
 (UTTERANCE::propose-stop (task "install-panel") (event "ee-au-01"))
 (UTTERANCE::verbal-emotion-somatic-marker (task "install-panel") (event "ee-au-01") (valence -0.5) (arousal -0.5) (stance 0.1))
 (UTTERANCE::verbal-emotion-instance (task "install-panel") (event "ee-au-01") (emotion-instance FRUSTRATION))
-;(EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (emotion-instance FRUSTRATION))

@@ -8,7 +8,7 @@ public class Appraisal extends Mechanisms{
 	
 	public void appraise(String strRules) {
 		try {
-			//JessEngine.executeCommand("(load-facts " + strAppraisalData + ")");
+//			JessEngine.executeCommand("(load-facts " + strAppraisalData + ")");
 			JessEngine.batch(strRules);
 			JessEngine.run();
 //			JessEngine.executeCommand("(facts *)");

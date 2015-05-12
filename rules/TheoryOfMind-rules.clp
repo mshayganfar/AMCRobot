@@ -26,7 +26,7 @@
 
 (defrule ToM::user-model
 "To update human's user model."
-(EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (emotion-instance ?emotionInstance))
+(EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (agent HUMAN) (emotion-instance ?emotionInstance))
 (COLLABORATION::task-precondition-status (task "install-panel") (event "ee-au-01") (preconditions-status ?precondStatus))
 (COLLABORATION::task-postcondition-status (task "install-panel") (event "ee-au-01") (postconditions-status ?postcondStatus))
 (COLLABORATION::shared-goal-status (task "install-panel") (event "ee-au-01") (shared-goal-status ?sharedGoalStatus))
