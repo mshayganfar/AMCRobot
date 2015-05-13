@@ -7,8 +7,11 @@ public class PhaseController {
 		Awareness awareness = new Awareness();
 		Mediation mediation = new Mediation();
 		
-		awareness.run();
+		awareness.getPerceptionObject().initializeMechanisms();
+		
+		awareness.run("facts/sensoryData-Exp1-A1.dat");
 		mediation.run();
+		awareness.run("facts/sensoryData-Exp1-A3.dat");
 		
 		//Engagement engagement = new Engagement();
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();

@@ -4,16 +4,9 @@ import jess.JessException;
 
 public class Perception extends Mechanisms{
 
-	private static final String strSensoryData = "facts/sensoryData-Exp1-A1.dat";
-	
-	public void initPerception() {
-		super.initializeMechanisms();
-	}
-		
-	public void perceive() {
+	public void perceive(String strSensoryData) {
 		try {
 			// Repeating this line will cause an exception because of redefining existing modules.
-			this.initPerception();
 			JessEngine.executeCommand("(load-facts " + strSensoryData + ")");
 		} catch (JessException e) {
 			System.out.println("Exception in peceiving sensory data!\n");

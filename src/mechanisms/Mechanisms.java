@@ -7,16 +7,17 @@ public class Mechanisms {
 
 	protected static Rete JessEngine = new Rete();
 	
-	protected static final String strUtteranceTemplates           = "templates/events/utterance-templates.clp";
 	protected static final String strCollaborationModuleTemplates = "templates/mechanisms/collaboration-module-templates.clp";
 	protected static final String strMotivationModuleTemplates    = "templates/mechanisms/motivation-module-templates.clp";
 	protected static final String strAppraisalModuleTemplates     = "templates/mechanisms/appraisal-module-templates.clp";
 	protected static final String strCopingModuleTemplates        = "templates/mechanisms/coping-module-templates.clp";
 	protected static final String strToMModuleTemplates           = "templates/mechanisms/ToM-module-templates.clp";
+	protected static final String strActionModuleTemplates        = "templates/mechanisms/action-module-templates.clp";
 	protected static final String strMentalStatesTemplates        = "templates/mental-states/mental-states-templates.clp";
 	protected static final String strEmotionInstanceTemplates     = "templates/events/emotion-instance-templates.clp";
+	protected static final String strUtteranceTemplates           = "templates/events/utterance-templates.clp";
 	
-	protected void initializeMechanisms() {
+	public static void initializeMechanisms() {
 		try {
 			JessEngine.batch("modules/module-definitions.clp");
 			JessEngine.reset();
@@ -28,6 +29,7 @@ public class Mechanisms {
 			JessEngine.batch(strToMModuleTemplates);
 			JessEngine.batch(strMentalStatesTemplates);
 			JessEngine.batch(strEmotionInstanceTemplates);
+			JessEngine.batch(strActionModuleTemplates);
 		} catch (JessException e) {
 			e.printStackTrace();
 		}

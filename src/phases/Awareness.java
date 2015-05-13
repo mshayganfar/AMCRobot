@@ -1,5 +1,7 @@
 package phases;
 
+import mechanisms.Perception;
+
 /**
  * 
  * @author Mohammad Shayganfar
@@ -11,13 +13,15 @@ package phases;
  */
 public class Awareness extends Phases{
 	
-	public void run() {
+	public void run(String strSensoryData) {
 		
-		perception.perceive();
+		perception.perceive(strSensoryData);
 		collaboration.runCollaborationRules("rules/Collaboration-rules.clp");
 		tom.runToMRules("rules/TheoryOfMind-rules.clp");
 		appraisal.appraise("rules/Appraisal-rules.clp");
 		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
 		coping.cope("rules/Coping-rules.clp");
 	}
+	
+	public Perception getPerceptionObject() { return perception; }
 }

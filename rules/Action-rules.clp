@@ -15,6 +15,8 @@
 ;;;
 ;;;=============================================================
 
+(focus ACTION)
+
 ;(defrule emotion-check
 ;"To check constraints"
 ;(UTTERANCE::emotion-valence (task test) (valence-type POSITIVE))
