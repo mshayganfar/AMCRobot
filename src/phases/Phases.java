@@ -10,6 +10,7 @@ public class Phases {
 	protected Appraisal appraisal;
 	protected Motivation motivation;
 	protected Coping coping;
+	protected Action action;
 	
 	public Phases() {
 		this.perception    = new Perception();
@@ -18,5 +19,6 @@ public class Phases {
 		this.appraisal     = new Appraisal();
 		this.motivation    = new Motivation();
 		this.coping        = new Coping();
+		this.action        = new Action();
 	}
 }

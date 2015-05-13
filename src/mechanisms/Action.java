@@ -1,15 +1,14 @@
 package mechanisms;
 
 import jess.JessException;
-import jess.Rete;
-
 
 public class Action extends Mechanisms{
 
-	public void takeAction(String strActionRules) {
+	public void takeAction(String strRules) {
 		try {
-			JessEngine.batch(strActionRules);
+			JessEngine.batch(strRules);
 			JessEngine.run();
+//			JessEngine.executeCommand("(facts *)");
 		} catch (JessException e) {
 			System.out.println("Exception in taking an action!\n");
 			e.printStackTrace();

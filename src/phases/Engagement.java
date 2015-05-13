@@ -14,14 +14,9 @@ import mechanisms.*;
  */
 public class Engagement extends Phases{
 
-	private Action action;
-	
-	public Engagement() {
-		this.action = new Action();
-	}
-	
-	public void run(String strActionRules) {
+	public void run() {
 		
-		action.takeAction(strActionRules);
+		coping.cope("rules/Coping-rules.clp");
+		action.takeAction("rules/Action-rules.clp");
 	}
 }

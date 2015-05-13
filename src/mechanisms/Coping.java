@@ -11,7 +11,7 @@ public class Coping extends Mechanisms{
 //			JessEngine.executeCommand("(load-facts " + strCopingData + ")");
 			JessEngine.batch(strRules);
 			JessEngine.run();
-			JessEngine.executeCommand("(facts *)");
+//			JessEngine.executeCommand("(facts *)");
 		} catch (JessException e) {
 			System.out.println("Exception in loading motivation facts!\n");
 			e.printStackTrace();

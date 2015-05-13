@@ -17,8 +17,25 @@
 
 (focus ACTION)
 
-;(defrule emotion-check
-;"To check constraints"
-;(UTTERANCE::emotion-valence (task test) (valence-type POSITIVE))
-;=>
-;(printout t "works!" crlf))
+(defrule ACTION::acknowledge-emotion
+"To acknowledge emotions."
+?fact1 <- (COPING::emotion-focused-coping-behavior (task "install-panel") (event "ee-au-01") (action "acknowledge-emotion") (intention "acknowledge-emotion") (coping-strategy UNKNOWN))
+=>
+(printout t "I see. This is frustrating." crlf)
+(retract ?fact1))
+
+
+(defrule ACTION::provide-alternative-solution
+"To provide alternative solutions."
+?fact2 <- (COPING::intention-based-coping-behavior (task "install-panel") (event "ee-au-01") (action "provide-alternative-solution") (intention "provide-alternative-solution") (coping-strategy PLANNING))
+=>
+(printout t "But, I can help you with the measurement tool and we can finish the task as originally planned." crlf)
+(retract ?fact2))
+
+(defrule ACTION::negotiate-removing-impasse
+"To provide alternative solutions."
+?fact3 <- (COPING::intention-based-coping-behavior (task "install-panel") (event "ee-au-01") (action "negotiate-removing-impasse") (intention "negotiate-removing-impasse") (coping-strategy PLANNING))
+=>
+(printout t "The next task is fixing the panel and it needs you to prepare and attach the welding rod to your welding tool. To save our time, I will fetch another measurement tool while you are preparing your welding tool." crlf)
+(retract ?fact3))
+

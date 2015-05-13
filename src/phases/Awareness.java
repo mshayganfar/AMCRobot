@@ -20,7 +20,6 @@ public class Awareness extends Phases{
 		tom.runToMRules("rules/TheoryOfMind-rules.clp");
 		appraisal.appraise("rules/Appraisal-rules.clp");
 		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
-		coping.cope("rules/Coping-rules.clp");
 	}
 	
 	public Perception getPerceptionObject() { return perception; }
