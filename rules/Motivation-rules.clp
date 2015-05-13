@@ -28,6 +28,14 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule MOTIVATION::generate-negotiation-belief
+"To generate a new belief according to the new negotiation motive."
+(MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "negotiate-removing-impasse") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))
+=>
+(assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "negotiate-removing-impasse") (belief-type PRIVATE) (belief-about OTHER) (strength HIGH) (accuracy MEDIUM) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence HIGH))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
 (defrule MOTIVATION::generate-intention
 "To generate a new intention according to the result of appraisal with respect to the robot's/shared goal."
 ;(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to OTHER-GOAL) (perspective OTHER) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution UNKNOWN) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
@@ -38,11 +46,30 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule MOTIVATION::generate-negotiation-intention
+"To generate a new intention with respect to the new belief about negotiation."
+;(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to OTHER-GOAL) (perspective OTHER) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution UNKNOWN) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "negotiate-removing-impasse") (belief-type PRIVATE) (belief-about OTHER) (strength HIGH) (accuracy MEDIUM) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence HIGH))
+=>
+(assert (MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "negotiate-removing-impasse") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
 (defrule MOTIVATION::generate-motive
 "To generate a new motive according to the result of appraisal with respect to the shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
 =>
 (assert (MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "acknowledge-emotion") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule MOTIVATION::generate-negotiation-motive
+"To generate a new motive according to the need for negotiation."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(ToM::reverse-appraisal (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (emotion-instance FRUSTRATION) (perspective OTHER) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+=>
+(assert (MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "negotiate-removing-impasse") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))))
 ;; A method should be called in Java to assert this fact into the working memory.
 
 

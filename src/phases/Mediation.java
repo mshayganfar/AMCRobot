@@ -14,11 +14,10 @@ public class Mediation extends Phases{
 
 	public void run() {
 		
-//		perception.perceive();
 		collaboration.runCollaborationRules("rules/Collaboration-rules.clp");
 		appraisal.appraise("rules/Appraisal-rules.clp");
 		tom.runToMRules("rules/TheoryOfMind-rules.clp");
-//		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
-//		coping.cope("rules/Coping-rules.clp");
+		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
+		coping.cope("rules/Coping-rules.clp");
 	}
 }
