@@ -1,0 +1,2 @@
+(UTTERANCE::ask-can (task "fix-measurement-tool") (event "ee-au-03"))
+(UTTERANCE::verbal-emotion-instance (task "install-panel") (event "ee-au-03") (emotion-instance UNKNOWN))

@@ -60,6 +60,12 @@
 (slot event (type STRING))
 (multislot responsible (type SYMBOL) (allowed-values ROBOT HUMAN BOTH UNKNOWN) (default UNKNOWN)))
 
+(deftemplate UTTERANCE::reject
+"No"
+(multislot task (type STRING))
+(slot event (type STRING))
+(multislot responsible (type SYMBOL) (allowed-values ROBOT HUMAN BOTH UNKNOWN) (default UNKNOWN)))
+
 (deftemplate UTTERANCE::discourse-marker
 "To use them (say) for expressing an attitude."
 (slot task (type STRING))

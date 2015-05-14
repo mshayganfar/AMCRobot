@@ -1,0 +1,2 @@
+(UTTERANCE::explain (task "install-panel") (event "ee-au-02") (reason "measurement-tool-problem"))
+(UTTERANCE::propose-stop (task "install-panel") (event "ee-au-02"))

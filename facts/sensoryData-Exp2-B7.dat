@@ -1,0 +1,2 @@
+(UTTERANCE::reject (task "fetch-measurement-tool") (event "ee-au-04") (responsible ROBOT))
+(UTTERANCE::explain (task "install-panel") (event "ee-au-04") (reason "time-shortage"))

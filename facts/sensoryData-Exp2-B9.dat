@@ -1,0 +1,4 @@
+(UTTERANCE::explain (task "install-panel") (event "ee-au-05") (reason "problem-exists"))
+(UTTERANCE::propose-stop (task "install-panel") (event "ee-au-05"))
+(UTTERANCE::causality (task "install-panel") (event "ee-au-05") (cause "measurement-tool-problem") (effect "mission-termination"))
+(UTTERANCE::propose-status (task "install-panel") (event "ee-au-05") (phase END) (status UNLIKELY))
