@@ -24,11 +24,27 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule APPRAISAL::emotion-instance-2
+"The most relevent emotion instance to current appraisal."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness EXPECTED) (urgency URGENT))
+=>
+(assert (EMOTION-INSTANCE::emotion-instance (event "ee-au-02") (agent HUMAN) (emotion-instance FRUSTRATION))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
 (defrule APPRAISAL::emotion-instance-somatic-markers
 "The most relevent emotion instance to current appraisal."
 (EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (agent HUMAN) (emotion-instance FRUSTRATION))
 =>
 (assert (UTTERANCE::verbal-emotion-somatic-marker (task "install-panel") (event "ee-au-01") (valence -0.5) (arousal -0.5) (stance 0.1))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule APPRAISAL::emotion-instance-somatic-markers-2
+"The most relevent emotion instance to current appraisal."
+(EMOTION-INSTANCE::emotion-instance (event "ee-au-02") (agent HUMAN) (emotion-instance FRUSTRATION))
+=>
+(assert (UTTERANCE::verbal-emotion-somatic-marker (task "install-panel") (event "ee-au-02") (valence -0.3) (arousal -0.3) (stance 0.1))))
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
@@ -44,6 +60,15 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule APPRAISAL::utterance-based-appraisal-process-2
+"To appraise the current event based on other's utterances."
+(UTTERANCE::ask-can (task "fix-measurement-tool") (event "ee-au-02"))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness EXPECTED) (urgency URGENT))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
 (defrule APPRAISAL::emotion-based-appraisal-process
 "To appraise the current event based on other's emotion."
 (UTTERANCE::verbal-emotion-somatic-marker (task "install-panel") (event "ee-au-01") (valence -0.5) (arousal -0.5) (stance 0.1))
@@ -52,4 +77,12 @@
 (assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to MENTAL-STATE-DISTANCE) (perspective OTHER) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
 ;; A method should be called in Java to assert this fact into the working memory.
 
+
+(defrule APPRAISAL::emotion-based-appraisal-process-2
+"To appraise the current event based on other's emotion."
+(UTTERANCE::verbal-emotion-somatic-marker (task "install-panel") (event "ee-au-02") (valence -0.3) (arousal -0.3) (stance 0.1))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to MENTAL-STATE-DISTANCE) (perspective OTHER) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness EXPECTED) (urgency URGENT))))
+;; A method should be called in Java to assert this fact into the working memory.
 

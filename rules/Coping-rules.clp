@@ -60,6 +60,15 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule COPING::intention-based-coping-process-negotiation-2
+"To evoke intention-based coping strategy."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness EXPECTED) (urgency URGENT))
+(MENTAL-STATE::intention (task "install-panel") (event "ee-au-02") (agent ROBOT) (intention "negotiate-removing-impasse") (temporal-status CONSISTENT) (direct-experience SIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
+=>
+(assert (COPING::intention-based-coping-behavior (task "install-panel") (event "ee-au-02") (action "negotiate-removing-impasse") (intention "negotiate-removing-impasse") (coping-strategy PLANNING))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
 (defrule COPING::attention-based-coping-process
 "To evoke attention-based coping strategy."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))

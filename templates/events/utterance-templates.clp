@@ -39,7 +39,7 @@
 "What are the somatic markers associated with verbally conveyed emotion?"
 (slot task (type STRING))
 (slot event (type STRING))
-(slot emotion-instance (type STRING)))
+(slot emotion-instance (type SYMBOL) (allowed-values JOY ANGER HOPE GUILT PRIDE SHAME WORRY FRUSTRATION NEUTRAL UNKNOWN) (default UNKNOWN)))
 
 (deftemplate UTTERANCE::verbal-emotion-somatic-marker
 "What are the somatic markers associated with verbally conveyed emotion?"

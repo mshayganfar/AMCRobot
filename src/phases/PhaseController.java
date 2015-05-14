@@ -13,10 +13,9 @@ public class PhaseController {
 		awareness.run("facts/sensoryData-Exp1-A1.dat");
 		engagement.run();
 		awareness.run("facts/sensoryData-Exp1-A3.dat");
-		engagement.run();
 		mediation.run();
-		awareness.run("facts/sensoryData-Exp1-A5.dat");
 		engagement.run();
+		awareness.run("facts/sensoryData-Exp1-A5.dat");
 		
 		//Engagement engagement = new Engagement();
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();

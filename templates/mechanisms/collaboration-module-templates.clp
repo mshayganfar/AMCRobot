@@ -103,8 +103,3 @@
 (slot event (type STRING))
 (slot task-status (type SYMBOL) (allowed-values DONE-SUCCESS DONE-FAILURE LIVE BLOCKED STARTED UNKNOWN) (default UNKNOWN)))
 
-(deftemplate COLLABORATION::mental-states-distance
-"The distance between the robot's and human's mental states."
-(slot task (type STRING))
-(slot event (type STRING))
-(slot distance (type SYMBOL) (allowed-values BIG SMALL MEDIUM UNKNOWN) (default UNKNOWN)))

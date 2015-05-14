@@ -24,6 +24,15 @@
 (assert (ToM::reverse-appraisal (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (emotion-instance FRUSTRATION) (perspective OTHER) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
 ;; Corresponding methods should be called in Java to obtain these values for appraisal variables based on my own algorithms.
 
+
+(defrule ToM::reverse-appraisal-2
+"To do reverse appraisal and infer values for human's appraisal variables."
+(UTTERANCE::verbal-emotion-instance (task "install-panel") (event "ee-au-02") (emotion-instance UNKNOWN))
+=>
+(assert (ToM::reverse-appraisal (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (emotion-instance FRUSTRATION) (perspective OTHER) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
+;; Corresponding methods should be called in Java to obtain these values for appraisal variables based on my own algorithms.
+
+
 (defrule ToM::user-model
 "To update human's user model."
 (EMOTION-INSTANCE::emotion-instance (event "ee-au-01") (agent HUMAN) (emotion-instance ?emotionInstance))
@@ -41,3 +50,12 @@
 ;			" , shared goal status: " ?sharedGoalStatus crlf))
 ;; Corresponding methods should be called in Java to use these values for updating human's user model.
 
+
+(defrule ToM::user-model-2
+"To update human's user model."
+(EMOTION-INSTANCE::emotion-instance (event "ee-au-02") (agent HUMAN) (emotion-instance ?emotionInstance))
+(COLLABORATION::attention-focus (task "install-panel") (event "ee-au-02") (agent HUMAN) (focus ENVIRONMENT))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (ToM::user-type (task "install-panel") (event "ee-au-02") (knowledge-competency LOW-AUTONOMY) (behavior-competency HIGH-COMMUNICATIVE))))
+;; Corresponding methods should be called in Java to use these values for updating human's user model.
