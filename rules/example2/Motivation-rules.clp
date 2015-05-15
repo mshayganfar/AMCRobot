@@ -59,6 +59,7 @@
 (defrule MOTIVATION::generate-belief-1
 "To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(COLLABORATION::task-status (task "install-panel") (event "ee-au-01") (task-status BLOCKED))
 ;; Other mental states are required here.
 =>
 (assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "task-blocked") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength HIGH) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))
@@ -68,6 +69,7 @@
 (defrule MOTIVATION::generate-belief-2
 "To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(COLLABORATION::attention-focus (task "install-panel") (event "ee-au-01") (agent HUMAN) (focus ENVIRONMENT))
 ;; Other mental states are required here.
 =>
 (assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "help-with-measurement-tool") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))
@@ -77,6 +79,7 @@
 (defrule MOTIVATION::generate-belief-3
 "To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(COLLABORATION::task-status (task "install-panel") (event "ee-au-01") (task-status BLOCKED))
 ;; Other mental states are required here.
 =>
 (assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "task-termination") (belief-type PRIVATE) (belief-about TASK) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))

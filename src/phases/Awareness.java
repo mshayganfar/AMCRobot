@@ -16,8 +16,8 @@ public class Awareness extends Phases{
 	public void run(String strSensoryData, String strExample) {
 		
 		perception.perceive(strSensoryData, strExample);
-//		collaboration.runCollaborationRules("rules/" + strExample + "/Collaboration-rules.clp");
-//		tom.runToMRules("rules/" + strExample + "/TheoryOfMind-rules.clp");
+		collaboration.runCollaborationRules("rules/" + strExample + "/Collaboration-rules.clp");
+		tom.runToMRules("rules/" + strExample + "/TheoryOfMind-rules.clp");
 		appraisal.appraise("rules/" + strExample + "/Appraisal-rules.clp");
 		motivation.generateMotivationOutput("rules/" + strExample + "/Motivation-rules.clp");
 	}
