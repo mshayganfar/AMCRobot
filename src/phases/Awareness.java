@@ -18,8 +18,8 @@ public class Awareness extends Phases{
 		perception.perceive(strSensoryData, strExample);
 //		collaboration.runCollaborationRules("rules/" + strExample + "/Collaboration-rules.clp");
 //		tom.runToMRules("rules/" + strExample + "/TheoryOfMind-rules.clp");
-//		appraisal.appraise("rules/" + strExample + "/Appraisal-rules.clp");
-//		motivation.generateMotivationOutput("rules/" + strExample + "/Motivation-rules.clp");
+		appraisal.appraise("rules/" + strExample + "/Appraisal-rules.clp");
+		motivation.generateMotivationOutput("rules/" + strExample + "/Motivation-rules.clp");
 	}
 
 	public Perception getPerceptionObject() { return perception; }

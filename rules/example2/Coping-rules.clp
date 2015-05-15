@@ -18,11 +18,11 @@
 
 (defrule COPING::problem-focused-coping-process
 "To evoke problem-focused coping strategy."
-(ToM::reverse-appraisal (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (emotion-instance FRUSTRATION) (perspective OTHER) (relevance RELEVANT) (desirability DESIRABLE) (likelihood LIKELY) (causal-attribution NONE) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
-(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "astronaut-frustrated") (belief-type PRIVATE) (belief-about OTHER) (strength MEDIUM) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence UNKNOWN))
-(MENTAL-STATE::belief-about (event "ee-au-01") (mental-state-id "..."))
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "ask-remove-ambiguity") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
+;; Other mental states might be required here.
 =>
-(assert (COPING::problem-based-coping-behavior (task "install-panel") (event "ee-au-01") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))))
+(assert (COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-01") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))))
 ;; A method should be called in Java to assert this fact into the working memory.
 
 

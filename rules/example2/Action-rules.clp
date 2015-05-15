@@ -21,12 +21,12 @@
 "To provide alternative solutions."
 (COPING::intention-based-coping-behavior (task "install-panel") (event "ee-au-01") (action "provide-alternative-solutions") (intention "provide-alternative-solutions") (coping-strategy PLANNING))
 =>
-(printout t "But, I can help you with the measurement tool and we can finish the task as originally planned." crlf))
+(printout t "I can help you with the measurement tool and we can finish the task as originally planned." crlf))
 
 
 (defrule ACTION::seek-advice
 "To seek advice as social support for instrumental reasons."
-(COPING::problem-based-coping-behavior (task "install-panel") (event "ee-au-01") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))
+(COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-01") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))
 =>
 (printout t "What do you want me to do?" crlf)
 (reset))

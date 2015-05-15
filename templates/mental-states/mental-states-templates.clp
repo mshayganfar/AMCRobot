@@ -5,7 +5,7 @@
 (slot agent (type SYMBOL) (type SYMBOL) (allowed-values ROBOT HUMAN))
 (slot belief (type STRING))
 (slot belief-type (type SYMBOL) (allowed-values PRIVATE INFERRED MUTUAL))
-(slot belief-about (type SYMBOL) (allowed-values SELF OTHER EVENT ENVIRONMENT))
+(slot belief-about (type SYMBOL) (allowed-values SELF OTHER EVENT ENVIRONMENT TASK))
 (slot strength (type SYMBOL) (allowed-values HIGH MEDIUM LOW UNKNOWN) (default UNKNOWN))
 (slot accuracy (type SYMBOL) (allowed-values HIGH MEDIUM LOW UNKNOWN) (default UNKNOWN))
 (slot frequency (type SYMBOL) (allowed-values HIGH MEDIUM LOW UNKNOWN) (default UNKNOWN))

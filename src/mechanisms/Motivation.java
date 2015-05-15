@@ -4,9 +4,9 @@ import jess.JessException;
 
 public class Motivation extends Mechanisms{
 
-	private static final String strMotivationMotiveData    = "facts/motivation-motive-Exp1-01.dat";
-	private static final String strMotivationBeliefData    = "facts/motivation-belief-Exp1-01.dat";
-	private static final String strMotivationIntentionData = "facts/motivation-intention-Exp1-01.dat";
+//	private static final String strMotivationMotiveData    = "facts/motivation-motive-Exp1-01.dat";
+//	private static final String strMotivationBeliefData    = "facts/motivation-belief-Exp1-01.dat";
+//	private static final String strMotivationIntentionData = "facts/motivation-intention-Exp1-01.dat";
 	
 	public void generateMotivationOutput(String strRules) {
 		generateMotive(strRules);
