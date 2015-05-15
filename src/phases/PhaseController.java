@@ -2,26 +2,34 @@ package phases;
 
 public class PhaseController {
 
+	public static Awareness awareness    = new Awareness();
+	public static Mediation mediation    = new Mediation();
+	public static Engagement engagement = new Engagement();
+	
 	public static void main(String[] args) {
-		
-		Awareness awareness    = new Awareness();
-		Mediation mediation    = new Mediation();
-		Engagement engagement = new Engagement();
 		
 		awareness.getPerceptionObject().initializeMechanisms();
 		
-		awareness.run("facts/sensoryData-Exp1-A1.dat");
-		engagement.run();
-		awareness.run("facts/sensoryData-Exp1-A3.dat");
-		mediation.run();
-		engagement.run();
-		awareness.run("facts/sensoryData-Exp1-A5.dat");
+//		runFirstExample();
 		
-		//Engagement engagement = new Engagement();
+		runSecondExample();
+	}
+	
+	public static void runFirstExample() {
+		awareness.run("sensoryData-Exp1-A1.dat", "example1");
+		engagement.run("example1");
+		awareness.run("sensoryData-Exp1-A3.dat", "example1");
+		mediation.run("example1");
+		engagement.run("example1");
+		awareness.run("sensoryData-Exp1-A5.dat", "example1");
+
 		//SelfSynchronization selfSynchronization = new SelfSynchronization();
-		
-		//engagement.run("rules/Action-rules.clp");
 		//selfSynchronization.run();
+	}
+	
+	public static void runSecondExample() {
+		awareness.run("sensoryData-Exp2-B1.dat", "example2");
+//		engagement.run("example2");
 	}
 
 }

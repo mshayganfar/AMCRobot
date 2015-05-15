@@ -14,9 +14,9 @@ import mechanisms.*;
  */
 public class Engagement extends Phases{
 
-	public void run() {
+	public void run(String strExample) {
 		
-		coping.cope("rules/Coping-rules.clp");
-		action.takeAction("rules/Action-rules.clp");
+		coping.cope("rules/" + strExample + "/Coping-rules.clp");
+		action.takeAction("rules/" + strExample + "/Action-rules.clp");
 	}
 }

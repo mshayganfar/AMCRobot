@@ -12,15 +12,15 @@ import mechanisms.Perception;
  * 
  */
 public class Awareness extends Phases{
-	
-	public void run(String strSensoryData) {
+
+	public void run(String strSensoryData, String strExample) {
 		
-		perception.perceive(strSensoryData);
-		collaboration.runCollaborationRules("rules/Collaboration-rules.clp");
-		tom.runToMRules("rules/TheoryOfMind-rules.clp");
-		appraisal.appraise("rules/Appraisal-rules.clp");
-		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
+		perception.perceive(strSensoryData, strExample);
+//		collaboration.runCollaborationRules("rules/" + strExample + "/Collaboration-rules.clp");
+//		tom.runToMRules("rules/" + strExample + "/TheoryOfMind-rules.clp");
+//		appraisal.appraise("rules/" + strExample + "/Appraisal-rules.clp");
+//		motivation.generateMotivationOutput("rules/" + strExample + "/Motivation-rules.clp");
 	}
-	
+
 	public Perception getPerceptionObject() { return perception; }
 }

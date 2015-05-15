@@ -12,12 +12,12 @@ package phases;
  */
 public class Mediation extends Phases{
 
-	public void run() {
+	public void run(String strExample) {
 		
-		collaboration.runCollaborationRules("rules/Collaboration-rules.clp");
-		appraisal.appraise("rules/Appraisal-rules.clp");
-		tom.runToMRules("rules/TheoryOfMind-rules.clp");
-		motivation.generateMotivationOutput("rules/Motivation-rules.clp");
-		coping.cope("rules/Coping-rules.clp");
+		collaboration.runCollaborationRules("rules/" + strExample + "/Collaboration-rules.clp");
+		appraisal.appraise("rules/" + strExample + "/Appraisal-rules.clp");
+		tom.runToMRules("rules/" + strExample + "/TheoryOfMind-rules.clp");
+		motivation.generateMotivationOutput("rules/" + strExample + "/Motivation-rules.clp");
+		coping.cope("rules/" + strExample + "/Coping-rules.clp");
 	}
 }
