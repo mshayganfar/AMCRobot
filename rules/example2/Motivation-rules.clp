@@ -56,6 +56,14 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule MOTIVATION::generate-intention-5
+"To generate a new intention according to the result of appraisal with respect to the robot's/shared goal."
+(MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "ask-remove-ambiguity") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
+=>
+(assert (MENTAL-STATE::intention (task "install-panel") (event "ee-au-02") (agent ROBOT) (intention "ask-remove-ambiguity") (temporal-status CONSISTENT) (direct-experience SIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
 (defrule MOTIVATION::generate-belief-1
 "To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))

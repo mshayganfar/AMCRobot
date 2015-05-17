@@ -8,7 +8,7 @@ public class Action extends Mechanisms{
 		try {
 			JessEngine.batch(strRules);
 			JessEngine.run();
-//			JessEngine.executeCommand("(facts *)");
+//			JessEngine.executeCommand("(rules *)");
 		} catch (JessException e) {
 			System.out.println("Exception in taking an action!\n");
 			e.printStackTrace();

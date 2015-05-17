@@ -24,12 +24,11 @@
 (printout t "I can help you with the measurement tool and we can finish the task as originally planned." crlf))
 
 
-(defrule ACTION::seek-advice
+(defrule ACTION::seek-advice-1
 "To seek advice as social support for instrumental reasons."
 (COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-01") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))
 =>
-(printout t "What do you want me to do?" crlf)
-(reset))
+(printout t "What do you want me to do?" crlf))
 
 
 (defrule ACTION::seek-advice-2

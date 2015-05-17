@@ -28,3 +28,11 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule APPRAISAL::utterance-based-appraisal-process-2
+"To appraise the current event based on other's utterances."
+(UTTERANCE::explain (task "install-panel") (event "ee-au-02") (reason "measurement-tool-problem"))
+(UTTERANCE::propose-stop (task "install-panel") (event "ee-au-02"))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
+;; A method should be called in Java to assert this fact into the working memory.

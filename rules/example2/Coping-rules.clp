@@ -16,7 +16,7 @@
 
 (focus COPING)
 
-(defrule COPING::problem-focused-coping-process
+(defrule COPING::problem-focused-coping-process-1
 "To evoke problem-focused coping strategy."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
 (MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "ask-remove-ambiguity") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
@@ -26,7 +26,7 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
-(defrule COPING::intention-based-coping-process
+(defrule COPING::intention-based-coping-process-1
 "To evoke intention-based coping strategy."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
 (MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "remove-blocked-task") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
