@@ -35,3 +35,11 @@
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
+(defrule COPING::problem-focused-coping-process-2
+"To evoke problem-focused coping strategy."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(MENTAL-STATE::intention (task "install-panel") (event "ee-au-02") (agent ROBOT) (intention "ask-remove-ambiguity") (temporal-status CONSISTENT) (direct-experience SIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))
+;; Other mental states might be required here.
+=>
+(assert (COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-02") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))))
+;; A method should be called in Java to assert this fact into the working memory.

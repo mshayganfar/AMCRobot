@@ -31,3 +31,12 @@
 (printout t "What do you want me to do?" crlf)
 (reset))
 
+
+(defrule ACTION::seek-advice-2
+"To seek advice as social support for instrumental reasons."
+(COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-02") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))
+=>
+(printout t "Do you want me to fix this problem or terminate the task?" crlf)
+(reset))
+
+

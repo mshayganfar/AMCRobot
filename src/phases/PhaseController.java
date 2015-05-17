@@ -30,6 +30,7 @@ public class PhaseController {
 	public static void runSecondExample() {
 		awareness.run("sensoryData-Exp2-B1.dat", "example2");
 		engagement.run("example2");
+		awareness.run("sensoryData-Exp2-B3.dat", "example2");
 	}
 
 }
