@@ -23,6 +23,7 @@
 "To generate a new intention according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
 (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "task-blocked") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength HIGH) (accuracy HIGH) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))
+(MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "remove-blocked-task") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))
 =>
 (assert (MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "remove-blocked-task") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty CERTAIN) (ambivalence UNAMBIVALENT) (affective-cognitive-consistency CONSISTENT))))
 ;; A method should be called in Java to assert this fact into the working memory.
@@ -31,7 +32,8 @@
 (defrule MOTIVATION::generate-intention-2
 "To generate a new intention according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
-(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "help-with-measurement-tool") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))
+(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "broken-measurement-tool") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))
+(MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "help-with-measurement-tool") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))
 =>
 (assert (MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "help-with-measurement-tool") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty UNCERTAIN) (ambivalence AMBIVALENT) (affective-cognitive-consistency CONSISTENT))))
 ;; A method should be called in Java to assert this fact into the working memory.
@@ -40,7 +42,8 @@
 (defrule MOTIVATION::generate-intention-3
 "To generate a new intention according to the result of appraisal with respect to the robot's/shared goal."
 (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
-(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "task-termination") (belief-type PRIVATE) (belief-about TASK) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))
+(MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "proposed-task-termination") (belief-type PRIVATE) (belief-about TASK) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))
+(MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "task-termination") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))
 =>
 (assert (MENTAL-STATE::intention (task "install-panel") (event "ee-au-01") (agent ROBOT) (intention "task-termination") (temporal-status INCONSISTENT) (direct-experience DISSIMILAR) (certainty UNCERTAIN) (ambivalence AMBIVALENT) (affective-cognitive-consistency CONSISTENT))))
 ;; A method should be called in Java to assert this fact into the working memory.
@@ -80,7 +83,7 @@
 (COLLABORATION::attention-focus (task "install-panel") (event "ee-au-01") (agent HUMAN) (focus ENVIRONMENT))
 ;; Other mental states are required here.
 =>
-(assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "help-with-measurement-tool") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))
+(assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "broken-measurement-tool") (belief-type PRIVATE) (belief-about ENVIRONMENT) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))
 ;; A method should be called in Java to assert this fact into the working memory.
 
 
@@ -90,5 +93,37 @@
 (COLLABORATION::task-status (task "install-panel") (event "ee-au-01") (task-status BLOCKED))
 ;; Other mental states are required here.
 =>
-(assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "task-termination") (belief-type PRIVATE) (belief-about TASK) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))
+(assert (MENTAL-STATE::belief (task "install-panel") (event "ee-au-01") (agent ROBOT) (belief "proposed-task-termination") (belief-type PRIVATE) (belief-about TASK) (strength MEDIUM) (accuracy LOW) (frequency LOW) (recency HIGH) (saliency HIGH) (persistence LOW))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule MOTIVATION::generate-motive-1
+"To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(COLLABORATION::shared-goal-status (task "install-panel") (event "ee-au-01") (shared-goal-status BLOCKED))
+;; Other mental states are required here.
+=>
+(assert (MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "remove-blocked-task") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule MOTIVATION::generate-motive-2
+"To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(COLLABORATION::shared-goal-status (task "install-panel") (event "ee-au-01") (shared-goal-status BLOCKED))
+(COLLABORATION::task-status (task "install-panel") (event "ee-au-01") (task-status BLOCKED)) ; This task SHOULD be changed to measurement tool problem.
+;; Other mental states are required here.
+=>
+(assert (MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "help-with-measurement-tool") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule MOTIVATION::generate-motive-3
+"To generate a new belief according to the result of appraisal with respect to the robot's/shared goal."
+(APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-01") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))
+(COLLABORATION::shared-goal-status (task "install-panel") (event "ee-au-01") (shared-goal-status BLOCKED))
+(COLLABORATION::task-status (task "install-panel") (event "ee-au-01") (task-status BLOCKED))
+;; Other mental states are required here.
+=>
+(assert (MENTAL-STATE::motive (task "install-panel") (event "ee-au-01") (motive "task-termination") (agent ROBOT) (motive-insistence HIGH) (motive-importance IMPORTANT) (motive-urgency URGENT) (motive-intensity HIGH) (motive-failure-disruptiveness DISRUPTIVE) (motive-status PASSIVE))))
 ;; A method should be called in Java to assert this fact into the working memory.
