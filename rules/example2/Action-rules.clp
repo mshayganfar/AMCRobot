@@ -17,7 +17,7 @@
 
 (focus ACTION)
 
-(defrule ACTION::provide-alternative-solution
+(defrule ACTION::provide-alternative-solution-1
 "To provide alternative solutions."
 (COPING::intention-based-coping-behavior (task "install-panel") (event "ee-au-01") (action "provide-alternative-solutions") (intention "provide-alternative-solutions") (coping-strategy PLANNING))
 =>
@@ -35,7 +35,19 @@
 "To seek advice as social support for instrumental reasons."
 (COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-02") (action "ask-next-step") (intention "know-next-step") (coping-strategy SEEK-SOCIAL-INSTRUMENTAL-SUPPORT))
 =>
-(printout t "Do you want me to fix this problem or terminate the task?" crlf)
-(reset))
+(printout t "Do you want me to fix this problem or terminate the task?" crlf))
 
+
+(defrule ACTION::reject-proposal-1
+"To reject the Astronaut's proposal."
+(COPING::problem-focused-coping-behavior (task "install-panel") (event "ee-au-03") (action "reject-proposal") (intention "reject-proposal") (coping-strategy ACTIVE))
+=>
+(printout t "I cannot fix your measurement tool." crlf))
+
+
+(defrule ACTION::provide-alternative-solution-2
+"To provide alternative solutions."
+(COPING::intention-based-coping-behavior (task "install-panel") (event "ee-au-03") (action "provide-alternative-solutions") (intention "provide-alternative-solutions") (coping-strategy PLANNING))
+=>
+(printout t "But, I can fetch another one for you if you want?" crlf))
 

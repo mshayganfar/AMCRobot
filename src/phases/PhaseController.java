@@ -32,6 +32,10 @@ public class PhaseController {
 		engagement.run("example2");
 		awareness.run("sensoryData-Exp2-B3.dat", "example2");
 		engagement.run("example2");
+		awareness.run("sensoryData-Exp2-B5.dat", "example2");
+		engagement.run("example2");
+		awareness.run("sensoryData-Exp2-B7.dat", "example2");
+		engagement.run("example2");
 	}
 
 }

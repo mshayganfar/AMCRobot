@@ -36,3 +36,24 @@
 =>
 (assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-02") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
 ;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule APPRAISAL::utterance-based-appraisal-process-3
+"To appraise the current event based on other's utterances."
+(UTTERANCE::ask-can (task "fix-measurement-tool") (event "ee-au-03"))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-03") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood LIKELY) (causal-attribution OTHER) (controllability UNCONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
+(defrule APPRAISAL::utterance-based-appraisal-process-4
+"To appraise the current event based on other's utterances."
+(UTTERANCE::reject (task "fetch-measurement-tool") (event "ee-au-04") (responsible ROBOT))
+(UTTERANCE::explain (task "install-panel") (event "ee-au-04") (reason "time-shortage"))
+;; Other mental states asserted as facts should be added here to be used to build the graph.
+=>
+(assert (APPRAISAL::appraisal-frame (task "install-panel") (event "ee-au-04") (event-type UTTERANCE) (with-respect-to SHARED-GOAL) (perspective SELF) (relevance RELEVANT) (desirability UNDESIRABLE) (likelihood UNLIKELY) (causal-attribution OTHER) (controllability CONTROLLABLE) (changeability UNCHANGEABLE) (expectedness UNEXPECTED) (urgency URGENT))))
+;; A method should be called in Java to assert this fact into the working memory.
+
+
